@@ -1,0 +1,11 @@
+一、破解流程
+1、先安装官方包，安装完后，不要尝试运行主程序vs.exe；
+2、以管理员身份运行注册机；
+3、点击patch按钮，找到主程序安装路径/win/vs.exe选中对其进行patch；
+4、点击generate按钮，产生slickedit.lic，多次点击这个按钮生成的不同slickedit.lic都是可用的；
+5、把第4步中的slickedit.lic拷贝到主程序vs.exe所安装的目录下，运行主程序vs.exe，根据提示选中安装目录下的slickedit.lic文件，即可破解
+二、使用教程
+tools-->quick start config 选择vs或者vim配置使用环境
+project --> open worksapce 打开已经存在的项目的sln文件
+右击open窗口，右击，选择duplicate,右击选择def，拖动到对应位置
+

@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+```sequence
+title: 序列图sequence(示例)
+participant A
+participant B
+participant C
+participant D as test
 
-You can use the [editor on GitHub](https://github.com/liao20081228/wangdao_study_note/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+note left of A: A左侧说明
+note over B,C: 覆盖B,C的说明
+note right of C: C右侧说明
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A->A:自己到自己
+A->B:实线不带箭头
+A-->B:虚线不带箭头
+A->>B:实线带箭头
+A-->>B:虚线带箭头
+A-xB:带x带箭头实线（异步）
+A--xB:带x带箭头虚线（异步）
+C->D:激活
+activate C
+C->D:不激活
+deactivate C
 
-### Markdown
+C->+D:激活
+C->+D:激活
+C->-D:不激活
+C->-D:不激活
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+loop 循环
+B->C:测试循环
+B->>C:测试循环
+B-->C:测试循环
+B-->>C:测试循环
+end
+A->>D:首选路径
+alt 替代路径1
+A->>C: 
+C->>D: 
+else 替代路径2
+A->>B: 
+B->>D: 
+end
+A-->>C: 首选路径
+opt 一种替代路径
+A-->>B: 
+B-->>D: 
+end
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/liao20081228/wangdao_study_note/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
